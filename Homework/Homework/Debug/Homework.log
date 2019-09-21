@@ -1,0 +1,3 @@
+﻿  Source.cpp
+D:\Pavlo\ПМІ-12\Programming\Homework\Homework\Source.cpp(246,9): warning C4101:  'sum': unreferenced local variable
+  Homework.vcxproj -> D:\Pavlo\ПМІ-12\Programming\Homework\Debug\Homework.exe
