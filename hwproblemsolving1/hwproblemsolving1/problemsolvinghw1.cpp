@@ -69,6 +69,27 @@ void num_14(){
 	cout << position << " " << arr[position] << " " << min << endl;
 }
 
+void num_14_2_sposib() {
+	int n, k = 0;
+	double x, c, f, min = 1;
+	cin >> n;
+	for (int i = 1; i <= n; i++) {
+		cin >> x;
+		c = ceil(x);
+		f = floor(x);
+		if (fabs(x - c) < min) {
+			min = fabs(x - c);
+			k = i;
+		}
+		if (fabs(x - f) < min) {
+			min = fabs(x - f);
+			k = i;
+		}
+	}
+	cout << "K = " << k << endl;
+
+}
+
 void num_17() {
 	int n;
 	cin >> n;
@@ -109,9 +130,10 @@ void num_18() {
 int main() {
 	//numb8g();
 	//numb12();
-	num_14();
+	//num_14();
 	//num_17();
 	//num_18();
+	num_14_2_sposib();
 	system("pause");
 	return 0;
 }
