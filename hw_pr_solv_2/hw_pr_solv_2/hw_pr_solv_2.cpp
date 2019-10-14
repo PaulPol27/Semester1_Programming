@@ -2,6 +2,7 @@
 #include <cmath>
 using namespace std;
 void numb_2a() {
+	//(x_1*y*1 + x_3*y_3 + ...) / (x_2*y*12 + x_4*y_4 + ...), yaksho x_1, x_2, ... x_6, y_1, y_2, ... , y_6.
 	const int n = 6;
 	int x[n], sum1 = 0, sum2 = 0, h;
 	for (int i = 0; i < n; i++) {
@@ -18,6 +19,7 @@ void numb_2a() {
 }
 
 void numb_2b() {
+	//(x_1*y*1 + x_3*y_3 + ...) / (x_2*y*12 + x_4*y_4 + ...), yaksho x_1, y_1, x_2, y_2, ... x_6, y_6.
 	const int n = 6;
 	int a[n];
 	int sum1 = 0, sum2 = 0, h;
@@ -36,6 +38,7 @@ void numb_2b() {
 
 
 void numb_5() {
+	//Dano masuv rozmiru N, nadrukuvatu elementu indeksu yakuch ye povnumu kvadratamu.
 	const int n = 100;
 	int x[n];
 	for (int i = 0; i < n; i++) {
@@ -50,6 +53,7 @@ void numb_5() {
 
 
 void numb_6() {
+	// Dano masuv rozmiru N, pershui i ostanniy element zalushutu na miszi, vsi rechta zaminutu serednim arefmetuchnum trioch elementiv masuvy.
 	const int n = 8;
 	double a[n];
 	for (int i = 0; i < n; i++) {
@@ -67,6 +71,7 @@ void numb_6() {
 }
 
 void numb8_b() {
+	//Dano masuv ziluch chusel rozmirnosti n.Zminniy T ptusvoitu znachennya 1; yaksho v masuvi nemaye nulyovuch elementiv i pru ziomu dodatni elementu cherguyutsya z vidyemnumu;
 	const int n = 8;
 	int a[n];
 	bool t = true;
@@ -105,6 +110,7 @@ void numb8_b() {
 }
 
 void numb_10() {
+	//Dano masuv rozmirnosti N. Znaytu sumu chusel, rozmishenu miz max i min chuslamu poslidovnosti;
 	const int n = 10;
 	int a[n], max, min, k = 0, p = 0;
 	int sum = 0;
@@ -135,11 +141,43 @@ void numb_10() {
 	cout << "Sum = " << sum << endl;
 }
 
+void matrix() {
+		double** a;
+		int n, m, k=0;
+		n = 3;
+		m = 3;
+		a = new double* [m];
+		for (int i = 0; i < m; i++) {
+			a[i] = new double[n];
+		}
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				cin >> a[i][j];
+			}
+		}
+		for (int i = 0; i < n ; i++) {
+			for (int j = 0; j < m-1; j++) {
+				if (a[i][j] < a[i][j+1]) {
+					if (j != 0) {
+						k++;
+						cout << a[i][j] << endl;
+					}
+				}
+				if (a[i][j] > a[i][j+1]) {
+					break;
+				}
+			}
+		}
+		cout << "K = " << k << endl;
+
+}
+
 int main() {
 	//numb_2a();
 	//numb_2b();
 	//numb_5();
-	numb_6();
+	//numb_6();
+	matrix();
 	system("pause");
 	return 0;
 }

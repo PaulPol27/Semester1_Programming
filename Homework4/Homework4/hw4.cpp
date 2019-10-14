@@ -14,7 +14,7 @@ void tabilyuvatu(){
 			k++;
 		}
 	}
-	cout << " \t = " << x << " y = " << y << " cos(x) = " << cos(x) << endl;
+	cout << " t = " << x << " y = " << y << " cos(x) = " << cos(x) << endl;
 }
 
 int main() {

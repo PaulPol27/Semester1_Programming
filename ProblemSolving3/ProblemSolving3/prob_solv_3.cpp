@@ -3,6 +3,7 @@
 using namespace std;
 
 void numb8_b() {
+	// Dano masuv ziluch chusel rozmirnosti n. Zminniy T ptusvoitu znachennya 1; yaksho v masuvi nemaye nulyovuch elementiv i pru ziomu dodatni elementu cherguyutsya z vidyemnumu;
 	const int n = 8;
 	int a[n];
 	bool t = true;
@@ -41,6 +42,7 @@ void numb8_b() {
 }
 
 void numb_10() {
+	//Dano masuv rozmirnosti N. Znaytu sumu chusel, rozmishenu miz max i min chuslamu poslidovnosti;
 	const int n = 10;
 	int a[n], max, min, k = 0, p = 0;
 	int sum = 0;
@@ -164,6 +166,7 @@ void numb_18() {
 }
 
 void numb_transponuvatu() {
+	// Transponuvatu matrix;
 	const int n = 4;
 	int m[n][n];
 	int temp;
@@ -191,7 +194,6 @@ void num_14() {
 	const int n = 4;
 	int m[n][n];
 	int x[n], y[n];
-	int dob = 0;
 	for (int i = 0; i < n; i++) {
 		for (int j = 0; j < n; j++) {
 			cin >> m[i][j];
@@ -214,12 +216,12 @@ void num_14() {
 int main() {
 	//numb8_b();
 	//numb_10();
-	//numb_matrix1();
+	numb_matrix1();
 	//numb_2();
 	//numb_25();
 	//numb_18();
 	//numb_transponuvatu();
-	num_14();
+	//num_14();
 	system("pause");
 	return 0;
 }
