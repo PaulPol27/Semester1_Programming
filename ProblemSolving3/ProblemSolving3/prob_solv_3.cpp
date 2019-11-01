@@ -216,8 +216,8 @@ void num_14() {
 int main() {
 	//numb8_b();
 	//numb_10();
-	numb_matrix1();
-	//numb_2();
+	//numb_matrix1();
+	numb_2();
 	//numb_25();
 	//numb_18();
 	//numb_transponuvatu();

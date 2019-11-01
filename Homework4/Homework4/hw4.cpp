@@ -17,6 +17,11 @@ void tabilyuvatu(){
 	cout << " t = " << x << " y = " << y << " cos(x) = " << cos(x) << endl;
 }
 
+void test_3()
+{
+
+}
+
 int main() {
 	tabilyuvatu();
 	system("pause");

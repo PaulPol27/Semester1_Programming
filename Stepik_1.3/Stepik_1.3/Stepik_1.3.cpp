@@ -63,10 +63,19 @@ void numb_3() {
 	}
 }
 
+void numb() {
+	/*int n;
+	cin >> n;*/
+	for (int n = 1000; n < 2000; n++) {
+		cout << n << "\t" << ((n / 1000) % ((n % 10) + 1)) + ((((n / 100) % 10) + 1) % (((n / 10) % 10) + 1)) + 1 << endl;
+	}
+}
+
 int main() {
 	//numb_1();
 	//numb_2();
-	numb_3();
+	//numb_3();
+	numb();
 	system("pause");
 	return 0;
 }
