@@ -236,6 +236,100 @@ void numb2() {
 	delete[]v;
 }
 
+bool isPrime(int x) {
+	if (x < 2)
+		return false;
+	for (int i = 2; i <= sqrt(x); i++) {
+		if (x % i == 0) {
+			return false;
+		}
+	}
+	return true;
+}
+
+void numb3() {
+	//Дано прямокутну матрицю розмірності  . Утворити вектор, кожен елемент якого дорівнює кількості простих елементів відповідного стовпця матриці.
+	int m, n;
+	cin >> m >> n;
+	int** a = new int*[m];
+	for (int i = 0; i < m; i++) {
+		a[i] = new int[n];
+	}
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			cin >> a[i][j];
+		}
+	}
+	int* v = new int[n];
+	int k = 0;
+	int pos = 0;
+	for (int j = 0; j < n; j++) {
+		k = 0;
+		for (int i = 0; i < m; i++) {
+			if (isPrime(a[i][j])) {
+				k++;
+			}		
+		}
+		v[j] = k;
+	}
+	for (int i = 0; i < n; i++) {
+		cout << v[i] << " ";
+	}
+	for (int i = 0; i < m; i++) {
+		delete[]a[i];
+	}
+	delete[]a;
+	delete[]v;
+}
+
+bool palindrome(int l) {
+	int n, digit, rev = 0;
+	n = l;
+	do
+	{
+		digit = l % 10;
+		rev = (rev * 10) + digit;
+		l = l / 10;
+	} while (l != 0);
+	if (n == rev)
+		return true;
+	else
+		return false;
+}
+
+void numb4() {
+	int m, n;
+	cin >> m >> n;
+	int** a = new int* [m];
+	for (int i = 0; i < m; i++) {
+		a[i] = new int[n];
+	}
+	for (int i = 0; i < m; i++) {
+		for (int j = 0; j < n; j++) {
+			cin >> a[i][j];
+		}
+	}
+	int* v = new int[m];
+	for (int i = 0; i < m; i++) {
+		int min = INT_MAX;
+		for (int j = 0; j < n; j++) {
+			if (palindrome(a[i][j])) {
+				if(a[i][j] < min)
+				min = a[i][j];
+			}
+		}
+		v[i] = min;
+	}
+	for (int i = 0; i < m; i++) {
+		cout << v[i] << " ";
+	}
+	for (int i = 0; i < m; i++) {
+		delete[]a[i];
+	}
+	delete[]a;
+	delete[]v;
+}
+
 void numb5() {
 	//Дано масив цілих чисел. Вилучити з масиву елементи, які діляться на кожну зі своїх цифр.
 	int n;
@@ -263,20 +357,6 @@ void numb5() {
 	delete[]a;
 }
 
-bool palindrome(int l) {
-	int n, digit, rev = 0;
-	n = l;
-	do
-	{
-		digit = l % 10;
-		rev = (rev * 10) + digit;
-		l = l / 10;
-	} while (l != 0);
-	if (n == rev)
-		return true;
-	else
-		return false;
-}
 void numb6a() {
 	//Дано масив цілих чисел. Вилучити з масиву симетричні елементи. 
 	int n;
@@ -384,6 +464,65 @@ void numb8() {
 	delete[]a;
 }
 
+void numb9() {
+	//Дано масив цілих чисел.Від’ємні елементи замінити максимальним елементом
+	int n;
+	cin >> n;
+	int* a = new int[n];
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+	}
+	int max = a[0];
+	for (int i = 0; i < n; i++) {
+		if (a[i] > max) {
+			max = a[i];
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		if (a[i] < 0) {
+			a[i] = max;
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		cout << a[i] << " ";
+	}
+	delete[]a;
+}
+
+void numb10() {
+	//Дано масив дійсних чисел.  Після кожного елемента, який співпадає із максимальним елементом, вставити мінімальний елемент. 
+	int n; 
+	cin >> n;
+	int* a = new int[2 * n];
+	for (int i = 0; i < n; i++) {
+		cin >> a[i];
+	}
+	int max = a[0];
+	int min = a[0];
+	for (int i = 0; i < n; i++) {
+		if (a[i] > max) {
+			max = a[i];
+		}
+		if (a[i] < min) {
+			min = a[i];
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		if (a[i] == max) {
+			for (int j = n; j > i; j--) {
+				a[j] = a[j - 1];
+			}
+			a[i+1] = min;
+			n++;
+			i++;
+		}
+	}
+	for (int i = 0; i < n; i++) {
+		cout << a[i] << " ";
+	}
+	delete[]a;
+}
+
 void numb11() {
 	//Дано послідовність цілих чисел. Для кожної підпослідовності додатних елементів поміняти максимальний і мінімальний елементи.
 	int n;
@@ -420,6 +559,8 @@ void numb11() {
 
 
 
+
+
 int main() {
 	//numb1a();
 	//numb1b();
@@ -427,11 +568,15 @@ int main() {
 	//numb1d();
 	//numb1e();
 	//numb2();
+	//numb3();
+	numb4();
 	//numb5();
 	//numb6a();
 	//numb6();
 	//numb7();
 	//numb8();
+	//numb9();
+	//numb10();
 	//numb11();
 	system("pause");
 	return 0;
