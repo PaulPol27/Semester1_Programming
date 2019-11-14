@@ -1,0 +1,4 @@
+Pol PMA 4
+Kinder PMK 3.66667
+Joy PMI 3.5
+Max PMI 3

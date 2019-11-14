@@ -1,0 +1,5 @@
+4
+Max PMI 4 3 4 2 3
+Pol PMA 3 3 5 4
+Kinder PMK 3 4 2 5
+Joy PMI 4 5 4 3 2 

@@ -1,0 +1,7 @@
+wolf 100
+cow 500
+mamont 1000
+han 30
+elephant 5000
+ara 45
+antylopa 50

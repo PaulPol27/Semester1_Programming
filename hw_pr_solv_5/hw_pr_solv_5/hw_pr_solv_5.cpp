@@ -342,7 +342,8 @@ void numb5() {
 		if (a[i] % 10 != 0) {
 			int k = (a[i] % (a[i] / 10));
 			int l = (a[i] % (a[i] % 10));
-			if (k != 0 || l != 0) {
+			int p = (a[i] % (a[i] % 100) / 10);
+			if (k != 0 || l != 0 || p != 0) {
 				for (int j = i; j < n - 1; j++) {
 					a[j] = a[j + 1];
 				}
@@ -556,6 +557,45 @@ void numb11() {
 	}
 	delete[]a;
 }
+void numb12() {
+	int n;
+	cout << "Input the number of columns and rows of a square matrix: ";
+	cin >> n;
+	int** a = new int* [n];
+	for (int i = 0; i < n; i++) {
+		a[i] = new int[n];
+	}
+	cout << "Input a square matrix: ";
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			cin >> a[i][j];
+		}
+	}
+	int* v = new int[3 * n - 2];
+	int k = 0;
+	for (int j = n - 1; j > 0; j--) {
+		v[k] = a[n - 1][j];
+		k++;
+	}
+	for (int j = 0; j < n - 1; j++) {
+		int i = n - 1 - j;
+		v[k] = a[i][j];
+		k++;
+	}
+	for (int j = n - 1; j >=0; j--) {
+		v[k] = a[0][j];
+		k++;
+	}
+	cout << "The new vector is: ";
+	for (int i = 0; i < 3 * n - 2; i++) {
+		cout << v[i] << " ";
+	}
+	for (int i = 0; i < n; i++) {
+		delete[]a[i];
+	}
+	delete[]a;
+	delete[]v;
+}
 
 
 
@@ -569,7 +609,7 @@ int main() {
 	//numb1e();
 	//numb2();
 	//numb3();
-	numb4();
+	//numb4();
 	//numb5();
 	//numb6a();
 	//numb6();
@@ -578,6 +618,7 @@ int main() {
 	//numb9();
 	//numb10();
 	//numb11();
+	numb12();
 	system("pause");
 	return 0;
 }
