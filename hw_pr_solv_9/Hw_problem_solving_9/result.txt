@@ -1,0 +1,16 @@
+Sort: 
+Gnom manager 6 
+Lyub manager 7 
+Pavlo trainee 5 
+Pavlo junior 6 
+Pavlo senior 9 
+
+Total pos and stag: 
+Gnom 6 manager 
+Lyub 7 manager 
+Pavlo 20 trainee junior senior 
+
+Min stag: 
+workers: 
+Gnom manager 6 
+Lyub manager 7 

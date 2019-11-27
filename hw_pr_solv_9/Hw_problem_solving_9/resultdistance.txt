@@ -1,0 +1,11 @@
+Kyiv Lviv 500 400 
+Kyiv Lviv 500 350 
+Odesa Kharkiv 1000 800 
+Odesa Kyiv 700 600 
+The unique distance is: Kyiv Lviv 500 375
+
+Minimal length of input initial station is: Odesa Kyiv 
+
+Kyiv Lviv 500 400 
+Kyiv Lviv 500 350 
+Odesa Kharkiv 1000 800 

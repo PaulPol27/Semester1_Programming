@@ -1,0 +1,4 @@
+3
+Borsh 5 Buriyak 50 5 Carrot 40 4 Potatoes 90 10 Meat 200 90 Cream 80 20
+Panecake 3 Flour 20 10 Eggs 100 10 Cream 80 20
+Soup 2 Milk 100 30 Greshka 50 90

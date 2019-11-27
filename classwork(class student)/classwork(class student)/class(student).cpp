@@ -58,7 +58,7 @@ public:
 	~student() {
 		delete[] marks;
 	}
-	student& operator = (const student& a) {
+	student& operator=(const student& a) {
 		if (this != &a) {
 			delete[]marks;
 			name = a.name;

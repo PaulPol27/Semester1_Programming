@@ -15,33 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pr_solving_7.cpp">
+    <ClCompile Include="classwork_2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="animal.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="circle.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="mass.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="sort%28triangl%29.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="sorted%28anim%29.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="goods.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="sorted(goods).txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="books.txt">
+    <Text Include="dishes.txt">
       <Filter>Resource Files</Filter>
     </Text>
     <Text Include="results.txt">

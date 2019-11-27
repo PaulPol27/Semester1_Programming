@@ -1,0 +1,3 @@
+2
+Kadinda 1950 3 Antilopa Elephant Tiger 2 3 4
+Joy 1930 2 Tiger Monkey 6 3

@@ -15,37 +15,25 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="pr_solving_7.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
+    <Text Include="worker.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="result.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="distance.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="resultdistance.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="animal.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="circle.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="mass.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="sort%28triangl%29.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="sorted%28anim%29.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="goods.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="sorted(goods).txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="books.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
-    <Text Include="results.txt">
-      <Filter>Resource Files</Filter>
-    </Text>
+    <ClCompile Include="Worker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Distance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

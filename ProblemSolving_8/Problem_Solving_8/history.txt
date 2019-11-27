@@ -1,0 +1,6 @@
+5
+Anatol 50 5 ORZ Grip ORZ Grip Grip
+Natalia 34 4 Kir ORZ Grip Grip
+Sergiy 15 3 Kir ORZ Angina
+Andriy 25 4 Angina Angina Kir ORZ
+Mykola 75 6 ORZ ORZ Angina Angina Angina Kir

@@ -458,28 +458,194 @@ Goods* minprice(Goods* a, int n, int& k) {
 	return b;
 }
 
+//int main() {
+//	int n;
+//	ifstream in;
+//	in.open("goods.txt");
+//	in >> n;
+//	Goods* a = new Goods[n];
+//	for (int i = 0; i < n; i++) {
+//		a[i].input(in);
+//	}
+//	in.close();
+//	sort(a, n);
+//	ofstream out("sorted(goods).txt");
+//	for (int i = 0; i < n; i++) {
+//		a[i].output(out);
+//	}
+//	int k = 0;
+//	Goods* b = minprice(a, n, k);
+//	for (int i = 0; i < k; i++) {
+//		b[i].print();
+//	}
+//	out.close();
+//	system("pause");
+//	return 0;
+//}
+
+
+class Books {
+private:
+	string name;
+	string author;
+	double price;
+public:
+	Books() {
+		string name = " ";
+		string author = " ";
+		double price = 0;
+	}
+	Books(string name, string author, double price) {
+		this->name = name;
+		this->author = author;
+		this->price = price;
+	}
+	void input(istream& in) {
+		in >> name >> author >> price;
+	}
+	void output(ostream& out) {
+		out << name << " " << author << " " << price << endl;
+	}
+	string getAuthor()const {
+		return author;
+	}
+	string getName()const {
+		return name;
+	}
+	double setPrice(double price) {
+		this->price = price;
+	}
+	double getPrice()const {
+		return price;
+	}
+	void print(ostream& out) {
+		out << name;
+	}
+};
+
+void sort(Books* a, int n) {
+	Books temp;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n - 1; j++) {
+			if (a[j].getAuthor() > a[j + 1].getAuthor()) {
+				temp = a[j];
+				a[j] = a[j + 1];
+				a[j + 1] = temp;
+			}
+		}
+	}
+}
+
+void compare(Books* books, int n, ostream& out, int min, int max) {
+	for (int i = 0; i < n; i++) {
+		if (books[i].getPrice() >= min && books[i].getPrice() <= max) {
+			books[i].print(out);
+		}
+	}
+}
+
+int sum(Books* book, int n, string author) {
+	int sum = 0;
+	for (int i = 0; i < n; i++) {
+		if (book[i].getAuthor() == author) {
+			sum += book[i].getPrice();
+		}
+	}
+	return sum;
+}
+
+void book(Books* book, int n, string name, ostream& out) {
+	int min = 0;
+	for (int i = 0; i < n; i++) {
+		if (book[i].getName() == name) {
+			if (book[i].getPrice() < min) {
+				min = book[i].getPrice();
+			}
+		}
+	}
+	out << name << " " << min << endl;
+}
+
+void arufmet(Books* book, int n, string name, ostream& out) {
+	int sum = 0;
+	int k = 0;
+	for (int i = 0; i < n; i++) {
+		if (book[i].getName() == name) {
+			sum += book[i].getPrice();
+			k++;
+		}
+	}
+	out << name << " " << sum / k << endl;
+}
+ 
+Books* new_arr(Books* book, int n, int& k) {
+	Books* b = new Books[n];
+	for (int i = 0; i < n; i++) {
+		Books max = book[i];
+		for (int j = i + 1; j < n; j++) {
+			if (book[i].getAuthor() == book[j].getAuthor()) {
+				if (book[j].getPrice() >= max.getPrice()) {
+					max = book[j];
+				}
+			}
+		}
+		bool flag = false;
+		for (int l = 0; l < k; l++) {
+			if (b[l].getAuthor() == max.getAuthor()) {
+				flag = true;
+			}
+		}
+		if (!flag) {
+			b[k] = max;
+			k++;
+		}
+	}
+	return b;
+}
+
 int main() {
 	int n;
-	ifstream in;
-	in.open("goods.txt");
+	ifstream in("books.txt");
 	in >> n;
-	Goods* a = new Goods[n];
+	Books* books = new Books[n];
 	for (int i = 0; i < n; i++) {
-		a[i].input(in);
+		books[i].input(in);
 	}
 	in.close();
-	sort(a, n);
-	ofstream out("sorted(goods).txt");
+	ofstream out("results.txt");
+	out << "First task: " << endl;
 	for (int i = 0; i < n; i++) {
-		a[i].output(out);
+		books[i].output(out);
 	}
+	out << endl;
+	sort(books, n);
+	for (int i = 0; i < n; i++) {
+		books[i].output(out);
+	}
+	out << endl << "Second task: " << endl;
+	int min = 50;
+	int max = 100;
+	compare(books, n, out, min, max);
+	out << endl;
+	string author;
+	cin >> author;
+	out << sum(books, n, author);
+	out << endl << "Third task: " << endl;
+	string name;
+	cin >> name;
+	book(books, n, name, out);
+	out << endl;
+	arufmet(books, n, name, out);
+	out << endl << "Fourth task: " << endl;
 	int k = 0;
-	Goods* b = minprice(a, n, k);
+	Books* new_array = new_arr(books, n, k);
 	for (int i = 0; i < k; i++) {
-		b[i].print();
+		new_array[i].output(out);
 	}
 	out.close();
 	system("pause");
 	return 0;
 }
+
+
 

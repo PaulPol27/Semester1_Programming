@@ -1,0 +1,6 @@
+5
+Pavlo trainee 5
+Lyub manager 7
+Pavlo junior 6
+Pavlo senior 9
+Gnom manager 6

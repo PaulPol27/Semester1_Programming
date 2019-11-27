@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{6398ECDB-59B9-4C03-AA65-C5252F592F3C}</ProjectGuid>
-    <RootNamespace>ProblemSolving7</RootNamespace>
+    <ProjectGuid>{66820F02-DD8A-4406-B80C-2F7B0E999CC3}</ProjectGuid>
+    <RootNamespace>ProblemSolving9</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -123,18 +123,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="pr_solving_7.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="animal.txt" />
-    <Text Include="books.txt" />
-    <Text Include="circle.txt" />
-    <Text Include="goods.txt" />
-    <Text Include="mass.txt" />
-    <Text Include="results.txt" />
-    <Text Include="sort%28triangl%29.txt" />
-    <Text Include="sorted%28anim%29.txt" />
-    <Text Include="sorted(goods).txt" />
+    <ClCompile Include="ProblemSolving_9.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

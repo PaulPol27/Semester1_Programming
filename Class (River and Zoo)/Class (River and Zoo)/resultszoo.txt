@@ -1,0 +1,5 @@
+Max Zoo is: Joy
+Tiger -- 6
+Monkey -- 3
+
+Joy 1930 Tiger Monkey 6 3 Kadinda 1950 Antilopa Elephant Tiger 2 3 4 

@@ -1,0 +1,5 @@
+4
+Kyiv Lviv 500 400
+Odesa Kharkiv 1000 800
+Kyiv Lviv 500 350 
+Odesa Kyiv 700 600

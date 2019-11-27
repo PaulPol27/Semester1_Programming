@@ -1,0 +1,22 @@
+First task: 
+A B 300
+H K 330
+T K 200
+H B 60
+
+A B 300
+H B 60
+H K 330
+T K 200
+
+Second task: 
+H
+360
+Third task: 
+H 60
+
+H 195
+
+Fourth task: 
+A B 300
+H K 330

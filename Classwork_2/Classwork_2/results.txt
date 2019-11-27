@@ -1,0 +1,7 @@
+Panecake Flour  Eggs  Cream  40 200
+ Soup Milk  Greshka  120 150
+ Borsh Buriyak  Carrot  Potatoes  Meat  Cream  129 460
+ 
+Soup 
+Panecake
+Borsh
