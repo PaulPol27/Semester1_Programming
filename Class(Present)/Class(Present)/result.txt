@@ -1,0 +1,12 @@
+11 Lyub Franko Flowers Plant 50 
+15 Mark Lesya Book Books 70 
+27 Paul Franko Computer Tech 100 
+27 Paul Schevchenko Notebook Books 20 
+31 Until Franko Book Books 40 
+
+Plant--50
+Books--130
+Tech--100
+
+Notebook
+Franko

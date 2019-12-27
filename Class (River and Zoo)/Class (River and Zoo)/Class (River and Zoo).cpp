@@ -138,7 +138,7 @@ string max_rivers(River* a, int n) {
 	}
 	return max.getName();
 }
-
+#pragma region er
 void compare(River* riv, int n, string name, double lenght, ostream& out) {
 	for (int i = 0; i < n; i++) {
 		if (riv[i].getName() == name) {
@@ -174,7 +174,7 @@ int main() {
 	return 0;
 }
 
-
+#pragma endregion
 class Zoo {
 private:
 	string name;

@@ -95,7 +95,7 @@ string min_stag(Worker* a, int n, string pos, ostream& out) {
 	return name;
 }
 
-void delete1(Worker*& a, int n,int& k, string sur) {
+void delete1(Worker*& a, int& n, string sur) {
 	for (int i = 0; i < n; i++) {
 		if (a[i].getSur() == sur) {
 			for (int j = i; j < n - 1; j++) {
@@ -105,43 +105,41 @@ void delete1(Worker*& a, int n,int& k, string sur) {
 			i--;
 		}
 	}
-	k = n;
 }
 
-//int main() {
-//	int n;
-//	ifstream in("worker.txt");
-//	in >> n;
-//	Worker* a = new Worker[n];
-//	for (int i = 0; i < n; i++) {
-//		in >> a[i];
-//	}
-//	in.close();
-//	ofstream out("result.txt");
-//	sort(a, n, out);
-//	out << "Sort: " << endl;
-//	for (int i = 0; i < n; i++) {
-//		out << a[i] << endl;
-//	}
-//	out << endl;
-//	out << "Total pos and stag: " << endl;
-//	print(a, n, out);
-//	out << endl;
-//	string pos;
-//	cin >> pos;
-//	out << "Min stag: ";
-//	out << min_stag(a, n, pos, out);
-//	out << endl;
-//	string sur;
-//	cin >> sur;
-//	out << "workers: " << endl;
-//	int k;
-//	delete1(a, n,k, sur);
-//	cout << k;
-//	for (int i = 0; i < k; i++) {
-//		out << a[i] << endl;
-//	}
-//	system("pause");
-//	return 0;
-//}
+int main() {
+	int n;
+	ifstream in("worker.txt");
+	in >> n;
+	Worker* a = new Worker[n];
+	for (int i = 0; i < n; i++) {
+		in >> a[i];
+	}
+	in.close();
+	ofstream out("result.txt");
+	sort(a, n, out);
+	out << "Sort: " << endl;
+	for (int i = 0; i < n; i++) {
+		out << a[i] << endl;
+	}
+	out << endl;
+	out << "Total pos and stag: " << endl;
+	print(a, n, out);
+	out << endl;
+	string pos;
+	cin >> pos;
+	out << "Min stag: ";
+	out << min_stag(a, n, pos, out);
+	out << endl;
+	string sur;
+	cin >> sur;
+	out << "workers: " << endl;
+	delete1(a, n, sur);
+	for (int i = 0; i < n; i++) {
+		out << a[i] << endl;
+	}
+	delete[]a;
+	system("pause");
+	return 0;
+}
 

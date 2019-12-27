@@ -1,0 +1,5 @@
+4
+MAU Kyiv-Riga 50 23
+Ryneair Berlin-Keln 7 6
+Tryusair Lviv-Faro 70 6
+Tryusair Lviv-Lyon 7 6
